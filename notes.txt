@@ -1,0 +1,12 @@
+1. Remove type="text/babel" from the script. What happens, 
+and can you explain why? Remove the babel JavaScript library 
+instead. What happens now?
+
+ANS: Babel will recognize JSX code in <script type="text/babel"></script> tags and transform it into JavaScript on the fly. Transforming JSX in the browser works quite well during development. However, you will need to pre-compile your JSX code into JS before deploying to production so that your app renders faster.
+
+2. What is Babel?
+ANS: Babel is a JavaScript compiler Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.
+
+3. Why we use className in react?
+
+ANS.class is a keyword in javascript and JSX is an extension of javascript. That's the principal reason why React uses className instead of class
