@@ -1,0 +1,15 @@
+$ npm install --save-dev babel-cli babel-preset-react
+
+Now we’re ready to transform App.jsx into pure JavaScript. Do this:
+
+$ node_modules/.bin/babel src --presets react --out-dir static
+
+example: 
+┌──(faisal㉿kali)-[~/playground/pro-mern-stack]
+└─$ node_modules/.bin/babel src --presets react --out-dir static
+src doesn't exist
+                                                                                                                                                                                                                                             
+┌──(faisal㉿kali)-[~/playground/pro-mern-stack]
+└─$ node_modules/.bin/babel public/src --presets react --out-dir static                                                                                                                                                                  2 ⨯
+public/src/App.jsx -> static/App.js
+                                      
