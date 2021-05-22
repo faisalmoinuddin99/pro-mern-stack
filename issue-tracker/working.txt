@@ -1,0 +1,25 @@
+1. The render() method is something that that the React framework calls when it
+needs to display the component.
+
+2. But render() is one that must be present; otherwise you’ll have a component that has no
+screen presence.
+
+3. Within the render() method, we’re supposed to return a native component instance,
+or an instance of a component defined by us. In this case, we returned a <div> element,
+just like the first Hello World example used an <h1> element.
+
+4. Let’s take a closer look at the last line:
+...
+ReactDOM.render(<IssueList />, contentNode);
+...
+
+5. Here, we rendered an instantiation of the IssueList component into the contents
+element defined in index.html. To instantiate a component, you write it in JSX as if it
+were an element, enclosed within angle brackets. It’s worth noting here that div and
+h1 are built-in internal React components that you can directly instantiate, whereas
+IssueList is something that you define and later instantiate. And within IssueList, you
+use React’s built-in div component.
+I’ve used component and instance of a component interchangeably, like sometimes
+we tend to do with objects. But it should be obvious by now that IssueList and div are
+actually React component classes, whereas <IssueList /> and <div /> are tangible
+components or instances of the component class.
