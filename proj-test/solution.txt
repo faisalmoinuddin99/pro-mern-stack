@@ -1,0 +1,71 @@
+****************** EXERCISE: NPM ****************
+
+1. Find out what difference --save made. Try uninstalling and
+re-installing express with and without this option. Hint: The
+difference is in package.json ?
+
+ANS: The npm option --save causes the installation/uninstallation
+to be recorded under the dependencies section of
+package.json.
+
+2. When was package.json created? If you can't guess, inspect
+the contents for a hint. Still can't figure out? Go back and redo
+your steps. Start with creation of the project directory, and look
+at the directory contents at each step.
+
+ANS: package.json got created when we created the project using
+npm init. In fact, all of the responses to the prompts when we
+ran npm init were recorded in package.json.
+
+
+************* EXERCISE: EXPRESS *******************
+
+1. Change the name of the file index.html to something else, say,
+hello.html . How does this affect the application?
+
+ANS: The static file middleware does not specially treat hello.html
+as it did index.html, so you will have to access the application
+with the name of the file like this: http://localhost:3000/
+hello.html.
+
+
+2. If you wanted all static files to be accessed by a prefixed URL, for
+example /public , what change would you make? Hint: Take a
+look at the Express documentation for static files and try this out.
+
+ANS: For accessing static files via a different mount point, specify that
+prefix in the middleware generated helper function as the first
+parameter. The directory name will now be the second parameter.
+For example, express.static('/public', 'static').
+
+3. Change the name of the web application file from server.js to
+something else, say, app.js . Now, what options do you have for
+starting up the web server? Hint: Look up the npm documentation,
+in specific, CLI commands and the command run-script .
+
+ANS: By default, npm start runs the command node server.js.
+If you use some other file name, say app.js, you should add
+"start": "node app.js" as a script under the scripts
+section of package.json to tell npm that this is the actual start
+command. Alternatively, you could just run the server yourself
+without using npm, using the command node app.js.
+
+
+**************** EXERCISE: ES2015 ***************
+
+1. Try to format the message as one per line by using <br /> to
+join the individual messages instead of a space. Are you able to
+do it? Why not?
+
+ANS: React does this on purpose, to avoid cross-site scripting
+vulnerabilities. It is not easy to insert HTML markup, although
+there is a way using the dangerouslySetInnerHTML attribute
+of an element. The correct way to do this is to compose an
+array of components. We will explore this in later chapters.
+
+2. Inspect the generated App.js now. What is new because of
+ES2015 transformation?
+
+ANS: Without ES2015 transformation, only JSX snippets were
+transformed. Now, with ES2015 transformation, even
+JavaScript is modified.
